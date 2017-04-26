@@ -1,5 +1,6 @@
 buildscript {
 	ext {
+<<<<<<< HEAD
 		springBootVersion = '1.5.3.RELEASE'
 	}
 	repositories {
@@ -40,3 +41,33 @@ jsx {
   //  extension = 'jsx' // js is the default extension
   // }
 }
+=======
+		springBootVersion = '1.5.2.RELEASE'
+	}
+	repositories {
+		mavenCentral()
+	}
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+
+version = '1.0'
+sourceCompatibility = 1.8
+
+repositories {
+	mavenCentral()
+}
+
+
+dependencies {
+	compile('org.springframework.boot:spring-boot-starter-actuator')
+	compile('org.springframework.boot:spring-boot-starter-web')
+	compile('org.springframework.boot:spring-boot-devtools')
+	testCompile('org.springframework.boot:spring-boot-starter-test')
+}
+>>>>>>> branch 'master' of https://github.com/gtgalone/GodArms
