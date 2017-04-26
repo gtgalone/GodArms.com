@@ -4,15 +4,18 @@ buildscript {
 	}
 	repositories {
 		mavenCentral()
+		jcenter()
 	}
 	dependencies {
 		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+		classpath("net.eikehirsch.react:gradle-react-plugin:0.4.1")
 	}
 }
 
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
+apply plugin: 'net.eikehirsch.react'
 
 version = '1.0'
 sourceCompatibility = 1.8
@@ -26,4 +29,14 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-actuator')
 	compile('org.springframework.boot:spring-boot-starter-web')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
+}
+
+
+jsx {
+  sourcesDir = 'src/react'
+  destDir    = 'out'
+  // optional
+  //options {
+  //  extension = 'jsx' // js is the default extension
+  //}
 }
