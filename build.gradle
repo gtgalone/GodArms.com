@@ -38,5 +38,5 @@ jsx {
   // optional
   //options {
   //  extension = 'jsx' // js is the default extension
-  //}
+  // }
 }
